@@ -5,7 +5,6 @@
 #include <ctime>
 #include <vector>
 #include <string>
-#include <cstdio>
 #include <filesystem>
 
 int main () {

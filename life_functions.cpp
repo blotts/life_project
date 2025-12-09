@@ -37,7 +37,7 @@ std::vector<int> rSeed(int &Nrows, int &Ncols) {
 // The grid is returned as a 1D vector with row-major ordering.
 //
 
-std::vector<int> sSeed(std::string filename, int &Nrows, int &Ncols) {
+std::vector<int> sSeed(const std::string &filename, int &Nrows, int &Ncols) {
     std::ifstream file;
     file.open(filename);
     if (!file) {
@@ -126,7 +126,7 @@ std::vector<int> advance(std::vector<int> &board, int Nrows, int Ncols) {
 // externally to visualize the evolution of the system.
 //
 
-void writePBM(std::string filename, std::vector<int> &board, int Nrows, int Ncols) {
+void writePBM(const std::string &filename, std::vector<int> &board, int Nrows, int Ncols) {
     std::ofstream file;
     file.open(filename);
     if(!file) {
